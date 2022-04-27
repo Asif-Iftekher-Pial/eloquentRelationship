@@ -26,7 +26,7 @@
                             </div>
                         @endif
                         <form method="post" id="upload_form" enctype="multipart/form-data">
-                            @csrf
+                           
                             <div class="alert alert-danger print-error-msg" style="display:none">
                                 <ul>
 
@@ -111,14 +111,10 @@
                             $('#description').val('');
                             $('#price').val('');
                             $('#subcategory_id').val('');
-                            
-                            
                         }
-
                     }
                 })
             });
-
         });
     </script>
 {{-- image Upload thumbanile --}}

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\EditproductController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -33,7 +34,9 @@ route::post('/savesubCategory',[CategoryController::class,'savesubCategory'])->n
 route::get('/product',[ProductController::class,'product'])->name('product');
 route::post('/prosave',[ProductController::class,'saveproduct'])->name('prosave');
 
-route::get('viewproducts',[ProductController::class,'viewproducts'])->name('viewproducts');
+route::get('/viewproducts',[ProductController::class,'viewproducts'])->name('viewproducts');
+
+route::resource('/productedit',EditproductController::class);
 
 // filters
 

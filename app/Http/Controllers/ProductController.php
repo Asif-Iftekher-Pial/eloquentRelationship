@@ -18,7 +18,7 @@ class ProductController extends Controller
     }
 
     public function saveproduct(Request $request){
-        //  dd($request->all());
+        //   dd($request->all());
         $validator=Validator::make($request->all(),[
             'title'=>'required|string',
             'description'=>'required',
